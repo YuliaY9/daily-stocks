@@ -2,7 +2,12 @@ import yfinance as yf
 import pandas as pd
 import smtplib
 from email.mime.text import MIMEText
-from config import EMAIL, PASSWORD, RECEIVER
+
+import os
+
+EMAIL = os.getenv("EMAIL")
+PASSWORD = os.getenv("PASSWORD")
+RECEIVER = os.getenv("RECEIVER")
 
 
 with open("ticker.txt", "r") as f:

@@ -2,7 +2,7 @@ name: Stock Alerts
 
 on:
   schedule:
-    - cron: '0 14 * * 1-5'  # בערך 17:00 ישראל
+    - cron: '0 14 * * 1-5'
   workflow_dispatch:
 
 jobs:
@@ -10,7 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repoimport os
+
+EMAIL = os.getenv("EMAIL")
+PASSWORD = os.getenv("PASSWORD")
+RECEIVER = os.getenv("RECEIVER")
         uses: actions/checkout@v3
 
       - name: Setup Python
