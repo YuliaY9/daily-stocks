@@ -10,11 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repoimport os
-
-EMAIL = os.getenv("EMAIL")
-PASSWORD = os.getenv("PASSWORD")
-RECEIVER = os.getenv("RECEIVER")
+      - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Setup Python
