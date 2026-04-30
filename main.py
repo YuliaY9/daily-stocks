@@ -152,7 +152,7 @@ message += "--------------------------\n"
 message += "FULL WATCHLIST:\n\n"
 
 for line in full_watchlist:
-    message += line + "\n"
+    message += line + "\n\n"
 
 if errors:
     message += "\n--------------------------\n"
